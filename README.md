@@ -1,4 +1,4 @@
-# VideoOpenerLibrary
+# Video Opener Library
 
 [![](https://jitpack.io/v/GalShashua/VideoOpenerLibrary.svg)](https://jitpack.io/#GalShashua/VideoOpenerLibrary)
 
