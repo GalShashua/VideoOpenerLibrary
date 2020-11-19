@@ -23,7 +23,7 @@ dependencies {
 
 ## License
 
-    Copyright 2019 Guy Isakov
+    Copyright 2020 Gal Shashua
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -37,9 +37,3 @@ dependencies {
     See the License for the specific language governing permissions and
     limitations under the License.
     
-## Credits
-
-5 stars icon:
-Icon made by Flat Icons (www.flat-icons.com) from www.flaticon.com
-Google play icon:
-Icon made by Flat Icons (www.flat-icons.com) from www.flaticon.com
