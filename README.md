@@ -2,6 +2,12 @@
 
 [![](https://jitpack.io/v/GalShashua/VideoOpenerLibrary.svg)](https://jitpack.io/#GalShashua/VideoOpenerLibrary)
 
+
+A library for simple implementation of smart ranking.
+The user will see a dialog every x time.
+If the user gives a high score, he will be transferred to the Google store. If he gives a low score, he will only receive a thank you toast message.
+
+
 ## Setup
 Step 1. Add it in your root build.gradle at the end of repositories:
 ```
@@ -18,6 +24,77 @@ Step 2. Add the dependency:
 dependencies {
   implementation 'com.github.GalShashua:VideoOpenerLibrary:1.00.01'
 }
+
+```
+
+## Usage
+
+###### StepProgress Constructor:
+```java
+
+// For continual calls - 
+SmartRate.Rate(MainActivity.this
+        , "Rate Us"
+        , "Tell others what you think about this app"
+        , "Continue"
+        , "Please take a moment and rate us on Google Play"
+        , "click here"
+        , "Ask me later"
+        , "Never ask again"
+        , "Cancel"
+        , "Thanks for the feedback"
+        , Color.parseColor("#2196F3")
+        , 4
+        , 48
+        , 72
+);
+
+// For one time call
+SmartRate.Rate(MainActivity.this
+        , "Rate Us"
+        , "Tell others what you think about this app"
+        , "Continue"
+        , "Please take a moment and rate us on Google Play"
+        , "click here"
+        , "Cancel"
+        , "Thanks for the feedback"
+        , Color.parseColor("#2196F3")
+        , 4
+);
+
+// With Call Back:
+SmartRate.Rate(MainActivity.this
+        , "Rate Us"
+        , "Tell others what you think about this app"
+        , "Continue"
+        , "Please take a moment and rate us on Google Play"
+        , "click here"
+        , "Cancel"
+        , "Thanks for the feedback"
+        , Color.parseColor("#2196F3")
+        , 4
+        , new SmartRate.CallBack_UserRating() {
+            @Override
+            public void userRating(int rating) {
+                // Do something
+                // maybe from now disable this button
+            }
+        }
+);
+
+// Self implement without link to google play store:
+// -1 on stars
+SmartRate.Rate(MainActivity.this
+        , Color.parseColor("#E44643")
+        , -1
+        , new SmartRate.CallBack_UserRating() {
+            @Override
+            public void userRating(int rating) {
+                Toast.makeText(MainActivity.this, "Rating: " + rating + " Stars", Toast.LENGTH_LONG).show();
+                //saveUserRating(rating);
+            }
+        }
+);
 
 ```
 
