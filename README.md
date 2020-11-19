@@ -16,7 +16,7 @@ Step 2. Add the dependency:
 
 ```
 dependencies {
-  implementation 'com.github.GalShashua:VideoOpenerLibrary:Tag'
+  implementation 'com.github.GalShashua:VideoOpenerLibrary:1.00.01'
 }
 
 ```
