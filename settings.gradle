@@ -1,0 +1,4 @@
+include ':mylibrary'
+include ':OpenVideoLibrary'
+include ':app'
+rootProject.name = "VideoOpener"
