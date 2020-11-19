@@ -3,6 +3,7 @@
 [![](https://jitpack.io/v/GalShashua/VideoOpenerLibrary.svg)](https://jitpack.io/#GalShashua/VideoOpenerLibrary)
 
 ![screenshot1](https://user-images.githubusercontent.com/56959832/99731678-ed6a7400-2ac6-11eb-9c66-78a67b204eae.JPG)
+![screenshot2](https://user-images.githubusercontent.com/56959832/99731752-0410cb00-2ac7-11eb-8c87-dde88d4be7e2.JPG)
 
 A library for simple implementation of smart ranking.
 The user will see a dialog every x time.
