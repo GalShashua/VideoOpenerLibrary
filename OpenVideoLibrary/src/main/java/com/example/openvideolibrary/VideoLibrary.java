@@ -39,20 +39,26 @@ import java.net.URL;
 
 public class VideoLibrary {
 
-
-
-    public static VideoLibrary openVideo(final Activity activity, String videoUri) {
+    public static void openVideo(final Activity activity, String videoUri) {
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(activity);
         LayoutInflater inflater = activity.getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.video_show, null);
         dialogBuilder.setView(dialogView);
+
+        //Initialize variables
         PlayerView playerView = dialogView.findViewById(R.id.player_view);
         ProgressBar progressBar = dialogView.findViewById(R.id.progress_bar);
         ImageView back_homepage = dialogView.findViewById(R.id.back_to_main_page);
         activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        final AlertDialog alertDialog = dialogBuilder.create();
+        alertDialog.setCancelable(false);
+        alertDialog.setCanceledOnTouchOutside(false);
+        alertDialog.show();
 
         Uri videoPath = Uri.parse(videoUri);
         SimpleExoPlayer simpleExoPlayer;
+
+        //Video initialize
         LoadControl loadControl = new DefaultLoadControl();
         BandwidthMeter bandwidthMeter= new DefaultBandwidthMeter();
         TrackSelector trackSelector = new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));
@@ -60,16 +66,10 @@ public class VideoLibrary {
         DefaultHttpDataSourceFactory factory = new DefaultHttpDataSourceFactory("exoplayer_video");
         ExtractorsFactory extractorsFactory = new DefaultExtractorsFactory();
         MediaSource mediaSource = new ExtractorMediaSource(videoPath, factory,extractorsFactory,null,null);
-
         playerView.setPlayer(simpleExoPlayer);
         playerView.setKeepScreenOn(true);
         simpleExoPlayer.prepare(mediaSource);
         simpleExoPlayer.setPlayWhenReady(true);
-
-        final AlertDialog alertDialog = dialogBuilder.create();
-        alertDialog.setCancelable(false);
-        alertDialog.setCanceledOnTouchOutside(false);
-        alertDialog.show();
 
         back_homepage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +78,7 @@ public class VideoLibrary {
                 simpleExoPlayer.stop();
             }
         });
+
         simpleExoPlayer.addListener(new Player.EventListener() {
             @Override
             public void onTimelineChanged(Timeline timeline, Object manifest, int reason) {
@@ -133,22 +134,5 @@ public class VideoLibrary {
 
             }
         });
-
-//        final RelativeLayout alert_LAY_back = dialogView.findViewById(R.id.alert_LAY_back);
-//        final AppCompatButton alert_BTN_ok = dialogView.findViewById(R.id.alert_BTN_ok);
-
-        return null;
     }
-
-    public static void hideSystemUI(Activity activity) {
-        View decorView = activity.getWindow().getDecorView();
-        decorView.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        //| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        //| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE);
-    }
-
 }
