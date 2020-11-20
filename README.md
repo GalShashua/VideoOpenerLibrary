@@ -39,7 +39,9 @@ VideoLibrary.openVideo(MainActivity.this,
 more videos example : https://i.imgur.com/x3Ykda2.mp4
 		      https://i.imgur.com/AYgFAOl.mp4
 	
+
 ## License
+```	
 
     Copyright 2020 Gal Shashua
 
@@ -54,4 +56,4 @@ more videos example : https://i.imgur.com/x3Ykda2.mp4
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-    
+    ``` 
