@@ -28,8 +28,6 @@ dependencies {
 ```
 
 ## Usage
-
-###### StepProgress Constructor:
 ```java
 
 // For continual calls - 
@@ -39,6 +37,8 @@ VideoLibrary.openVideo(MainActivity.this,
 more videos example : https://i.imgur.com/x3Ykda2.mp4
 		      https://i.imgur.com/AYgFAOl.mp4
 	
+```	
+
 
 ## License
 ```	
