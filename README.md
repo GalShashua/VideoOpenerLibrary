@@ -3,7 +3,7 @@
 [![](https://jitpack.io/v/GalShashua/VideoOpenerLibrary.svg)](https://jitpack.io/#GalShashua/VideoOpenerLibrary)
 
 ![screenshot0](https://user-images.githubusercontent.com/56959832/99788323-a2357d00-2b29-11eb-95f2-de9b57415958.JPG)
-![screenshot2](https://user-images.githubusercontent.com/56959832/99731752-0410cb00-2ac7-11eb-8c87-dde88d4be7e2.JPG)
+![screenshot3](https://user-images.githubusercontent.com/56959832/99791486-5d601500-2b2e-11eb-8d5c-ccc3e7500156.JPG)
 
 A library for open video (mp4) easly.
 With options to run the video 10 seconds forward or backward, stop and continue.
