@@ -1,6 +1,7 @@
 # Video Opener Library
 
 [![](https://jitpack.io/v/GalShashua/VideoOpenerLibrary.svg)](https://jitpack.io/#GalShashua/VideoOpenerLibrary)
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/GalShashua/VideoOpenerLibrary">
 <img alt="GitHub followers" src="https://img.shields.io/github/followers/GalShashua?style=social">
 <br/>
 <br/>
