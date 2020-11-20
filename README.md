@@ -33,71 +33,12 @@ dependencies {
 ```java
 
 // For continual calls - 
-SmartRate.Rate(MainActivity.this
-        , "Rate Us"
-        , "Tell others what you think about this app"
-        , "Continue"
-        , "Please take a moment and rate us on Google Play"
-        , "click here"
-        , "Ask me later"
-        , "Never ask again"
-        , "Cancel"
-        , "Thanks for the feedback"
-        , Color.parseColor("#2196F3")
-        , 4
-        , 48
-        , 72
-);
-
-// For one time call
-SmartRate.Rate(MainActivity.this
-        , "Rate Us"
-        , "Tell others what you think about this app"
-        , "Continue"
-        , "Please take a moment and rate us on Google Play"
-        , "click here"
-        , "Cancel"
-        , "Thanks for the feedback"
-        , Color.parseColor("#2196F3")
-        , 4
-);
-
-// With Call Back:
-SmartRate.Rate(MainActivity.this
-        , "Rate Us"
-        , "Tell others what you think about this app"
-        , "Continue"
-        , "Please take a moment and rate us on Google Play"
-        , "click here"
-        , "Cancel"
-        , "Thanks for the feedback"
-        , Color.parseColor("#2196F3")
-        , 4
-        , new SmartRate.CallBack_UserRating() {
-            @Override
-            public void userRating(int rating) {
-                // Do something
-                // maybe from now disable this button
-            }
-        }
-);
-
-// Self implement without link to google play store:
-// -1 on stars
-SmartRate.Rate(MainActivity.this
-        , Color.parseColor("#E44643")
-        , -1
-        , new SmartRate.CallBack_UserRating() {
-            @Override
-            public void userRating(int rating) {
-                Toast.makeText(MainActivity.this, "Rating: " + rating + " Stars", Toast.LENGTH_LONG).show();
-                //saveUserRating(rating);
-            }
-        }
-);
-
-```
-
+VideoLibrary.openVideo(MainActivity.this, 
+		"https://i.imgur.com/czpUGYA.mp4");
+		
+more videos example : https://i.imgur.com/x3Ykda2.mp4
+		      https://i.imgur.com/AYgFAOl.mp4
+	
 ## License
 
     Copyright 2020 Gal Shashua
