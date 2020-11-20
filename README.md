@@ -5,10 +5,8 @@
 ![screenshot0](https://user-images.githubusercontent.com/56959832/99788323-a2357d00-2b29-11eb-95f2-de9b57415958.JPG)
 ![screenshot2](https://user-images.githubusercontent.com/56959832/99731752-0410cb00-2ac7-11eb-8c87-dde88d4be7e2.JPG)
 
-A library for simple implementation of smart ranking.
-The user will see a dialog every x time.
-If the user gives a high score, he will be transferred to the Google store. If he gives a low score, he will only receive a thank you toast message.
-
+A library for open video (mp4) easly.
+With options to run the video 10 seconds forward or backward, stop and continue.
 
 ## Setup
 Step 1. Add it in your root build.gradle at the end of repositories:
